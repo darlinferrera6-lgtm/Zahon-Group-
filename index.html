@@ -95,7 +95,6 @@
             color: #FFFFFF;
         }
 
-        /* Utilidades para ocultar secciones */
         .section-hidden {
             display: none !important;
         }
@@ -103,7 +102,7 @@
 </head>
 <body class="h-screen flex flex-col md:flex-row antialiased">
 
-    <!-- Mensajes Toast (Reemplazo de alert) -->
+    <!-- Mensajes Toast -->
     <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
     <!-- Pantalla de Carga -->
@@ -118,9 +117,7 @@
         <!-- Logo -->
         <div class="p-6 flex items-center justify-center border-b border-gray-800 flex-col">
             <svg viewBox="0 0 100 100" class="w-16 h-16 mb-2">
-                <!-- Letra D (Dorado) -->
                 <path d="M25 20 v60 h20 c18 0 30 -12 30 -30 c0 -18 -12 -30 -30 -30 h-20 z" fill="none" stroke="#D4AF37" stroke-width="8" stroke-linejoin="round" />
-                <!-- Letra G (Plateado) -->
                 <path d="M75 35 c-4 -8 -12 -15 -25 -15 c-22 0 -35 15 -35 35 c0 20 13 35 35 35 c15 0 25 -8 30 -18 h-18" fill="none" stroke="#C0C0C0" stroke-width="8" stroke-linejoin="round" />
             </svg>
             <h1 class="text-xl font-bold tracking-widest">
@@ -236,7 +233,6 @@
                         <div>
                             <label class="block text-xs font-medium text-dazho-silver mb-1">Teléfono (WhatsApp)</label>
                             <input type="tel" id="bill-phone" required class="w-full px-3 py-2 rounded-md text-sm" placeholder="Ej. 18090000000">
-                            <p class="text-[10px] text-gray-500 mt-1">Código de país sin el + (Ej. 1 para RD)</p>
                         </div>
                         <div>
                             <label class="block text-xs font-medium text-dazho-silver mb-1">Descripción / Producto</label>
@@ -283,7 +279,7 @@
                                 </tr>
                             </thead>
                             <tbody id="tbody-billing">
-                                <!-- Data injectada via JS -->
+                                <!-- Data -->
                             </tbody>
                         </table>
                         <div id="empty-billing" class="text-center py-8 text-dazho-silver text-sm hidden">No hay ventas registradas.</div>
@@ -331,7 +327,7 @@
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg lg:col-span-2">
                     <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Catálogo de Productos</h3>
                     <div id="grid-inventory" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                        <!-- Data injectada via JS -->
+                        <!-- Data -->
                     </div>
                     <div id="empty-inventory" class="text-center py-8 text-dazho-silver text-sm hidden">El inventario está vacío.</div>
                 </div>
@@ -356,7 +352,7 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-medium text-dazho-silver mb-1">Correo Electrónico (Obligatorio)</label>
+                            <label class="block text-xs font-medium text-dazho-silver mb-1">Correo Electrónico</label>
                             <input type="email" id="client-email" required class="w-full px-3 py-2 rounded-md text-sm" placeholder="correo@ejemplo.com">
                         </div>
                         <div>
@@ -383,7 +379,7 @@
                                 </tr>
                             </thead>
                             <tbody id="tbody-clients">
-                                <!-- Data injectada via JS -->
+                                <!-- Data -->
                             </tbody>
                         </table>
                         <div id="empty-clients" class="text-center py-8 text-dazho-silver text-sm hidden">No hay clientes registrados.</div>
@@ -431,7 +427,7 @@
                                 </tr>
                             </thead>
                             <tbody id="tbody-team">
-                                <!-- Data injectada via JS -->
+                                <!-- Data -->
                             </tbody>
                         </table>
                         <div id="empty-team" class="text-center py-8 text-dazho-silver text-sm hidden">No hay miembros en tu equipo aún.</div>
@@ -463,7 +459,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Item 2 -->
                     <div class="bg-dazho-black border border-gray-800 rounded-lg overflow-hidden flex flex-col group shadow-lg">
                         <div class="h-48 bg-gray-900 relative overflow-hidden flex items-center justify-center">
@@ -478,7 +473,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Item 3 -->
                     <div class="bg-dazho-black border border-gray-800 rounded-lg overflow-hidden flex flex-col group shadow-lg">
                         <div class="h-48 bg-gray-900 relative overflow-hidden flex items-center justify-center">
@@ -493,7 +487,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Item 4 -->
                     <div class="bg-dazho-black border border-gray-800 rounded-lg overflow-hidden flex flex-col group shadow-lg">
                         <div class="h-48 bg-gray-900 relative overflow-hidden flex items-center justify-center">
@@ -515,7 +508,6 @@
         <!-- SECCIÓN: EDUCACIÓN (AUDIOS) -->
         <section id="section-education" class="app-section section-hidden space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Formulario -->
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg lg:col-span-1 h-fit">
                     <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Subir Material Educativo</h3>
                     <form id="form-education" class="space-y-4">
@@ -530,7 +522,6 @@
                         <div>
                             <label class="block text-xs font-medium text-dazho-silver mb-1">URL del Audio (MP3/WAV)</label>
                             <input type="url" id="edu-audio-url" required class="w-full px-3 py-2 rounded-md text-sm" placeholder="https://ejemplo.com/audio.mp3">
-                            <p class="text-[10px] text-gray-500 mt-1">Coloca un enlace directo a un archivo de audio compatible.</p>
                         </div>
                         <button type="submit" class="w-full py-2.5 bg-dazho-gold text-dazho-black font-bold rounded-md hover:bg-yellow-500 transition-colors shadow-[0_0_10px_rgba(212,175,55,0.3)]">
                             <i class="fa-solid fa-cloud-arrow-up mr-2"></i> Publicar Audio
@@ -538,27 +529,23 @@
                     </form>
                 </div>
 
-                <!-- Lista de Audios -->
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg lg:col-span-2">
                     <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Academia DAZHO</h3>
                     <div id="grid-education" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <!-- Data injectada via JS -->
+                        <!-- Data -->
                     </div>
                     <div id="empty-education" class="text-center py-8 text-dazho-silver text-sm hidden">No hay audios educativos publicados.</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN: SUSCRIPCIÓN DEL SISTEMA -->
+        <!-- SECCIÓN: SUSCRIPCIÓN -->
         <section id="section-subscription" class="app-section section-hidden space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Tarjeta de Plan y Pago -->
                 <div class="bg-gradient-to-br from-dazho-dark to-dazho-black p-6 rounded-xl border border-dazho-gold shadow-lg h-fit relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-dazho-gold opacity-10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2"></div>
-                    
                     <h3 class="text-xl font-semibold text-dazho-white mb-2">Plan DAZHO System Pro</h3>
-                    <p class="text-sm text-dazho-silver mb-6">Mantenimiento de plataforma, hosting de base de datos y actualizaciones continuas.</p>
-                    
+                    <p class="text-sm text-dazho-silver mb-6">Mantenimiento de plataforma y almacenamiento.</p>
                     <div class="text-4xl font-bold text-dazho-gold mb-6 border-b border-gray-700 pb-6">
                         $39.99 <span class="text-sm text-gray-500 font-normal">/mes</span>
                     </div>
@@ -574,7 +561,7 @@
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <div>
-                                <label class="block text-xs font-medium text-dazho-silver mb-1">Vencimiento (MM/AA)</label>
+                                <label class="block text-xs font-medium text-dazho-silver mb-1">Vencimiento</label>
                                 <input type="text" id="sub-exp" required maxlength="5" class="w-full px-3 py-2 rounded-md text-sm" placeholder="12/28">
                             </div>
                             <div>
@@ -586,24 +573,22 @@
                             <i class="fa-solid fa-lock mr-2"></i> Pagar Mensualidad
                         </button>
                     </form>
-                    <p class="text-[10px] text-gray-500 text-center mt-4"><i class="fa-solid fa-shield-halved"></i> Transacción segura y encriptada</p>
                 </div>
 
-                <!-- Historial de Pagos -->
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg overflow-x-auto">
-                    <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Historial de Facturación del Sistema</h3>
+                    <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Historial de Pagos</h3>
                     <div class="min-w-[400px]">
                         <table id="table-subscription">
                             <thead>
                                 <tr>
-                                    <th>Fecha de Pago</th>
+                                    <th>Fecha</th>
                                     <th>Monto</th>
                                     <th>Tarjeta</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody-subscription">
-                                <!-- Data injectada via JS -->
+                                <!-- Data -->
                             </tbody>
                         </table>
                         <div id="empty-subscription" class="text-center py-8 text-dazho-silver text-sm hidden">No hay pagos registrados aún.</div>
@@ -612,13 +597,11 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: CONTROL DE ACCESOS (GOOGLE) -->
+        <!-- SECCIÓN: ACCESOS -->
         <section id="section-access" class="app-section section-hidden space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Formulario -->
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg lg:col-span-1 h-fit">
                     <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Autorizar Acceso</h3>
-                    <p class="text-xs text-dazho-silver mb-4">Agrega los correos de Google (Gmail) de los miembros de tu equipo para permitirles iniciar sesión en esta plataforma.</p>
                     <form id="form-access" class="space-y-4">
                         <div>
                             <label class="block text-xs font-medium text-dazho-silver mb-1">Correo de Google (Gmail)</label>
@@ -638,7 +621,6 @@
                     </form>
                 </div>
 
-                <!-- Tabla de Accesos -->
                 <div class="bg-dazho-dark p-6 rounded-xl border border-gray-800 shadow-lg lg:col-span-2 overflow-x-auto">
                     <h3 class="text-lg font-semibold text-dazho-gold mb-4 border-b border-gray-700 pb-2">Usuarios Autorizados</h3>
                     <div class="min-w-[500px]">
@@ -647,12 +629,12 @@
                                 <tr>
                                     <th>Correo (Google)</th>
                                     <th>Rol</th>
-                                    <th>Fecha de Alta</th>
+                                    <th>Fecha</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody-access">
-                                <!-- Data injectada via JS -->
+                                <!-- Data -->
                             </tbody>
                         </table>
                         <div id="empty-access" class="text-center py-8 text-dazho-silver text-sm hidden">No hay usuarios autorizados.</div>
@@ -663,35 +645,7 @@
 
     </main>
 
-    <script type="module">
-        // Firebase Imports
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        // Global Variables
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'dazho-group-dashboard';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-            // Dummy config para evitar errores si se ejecuta fuera del entorno. En el entorno real será sustituido.
-            apiKey: "dummy", authDomain: "dummy", projectId: "dummy", storageBucket: "dummy", messagingSenderId: "dummy", appId: "dummy"
-        };
-        const initialToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-        // Firebase Init
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-        let currentUser = null;
-
-        // State Arrays
-        let salesData = [];
-        let inventoryData = [];
-        let teamData = [];
-        let clientsData = [];
-        let educationData = [];
-        let subscriptionData = [];
-        let accessData = [];
-
+    <script>
         // DOM Elements
         const loadingScreen = document.getElementById('loading-screen');
         const sidebar = document.getElementById('sidebar');
@@ -699,7 +653,24 @@
         const navBtns = document.querySelectorAll('.nav-btn');
         const pageTitle = document.getElementById('page-title');
         
-        // Función Toast para notificaciones (Reemplaza alert)
+        // Base de Datos Local (Memoria del Navegador)
+        const db = {
+            sales: JSON.parse(localStorage.getItem('dazho_sales')) || [],
+            inventory: JSON.parse(localStorage.getItem('dazho_inventory')) || [],
+            clients: JSON.parse(localStorage.getItem('dazho_clients')) || [],
+            team: JSON.parse(localStorage.getItem('dazho_team')) || [],
+            education: JSON.parse(localStorage.getItem('dazho_education')) || [],
+            subscriptions: JSON.parse(localStorage.getItem('dazho_subscriptions')) || [],
+            access: JSON.parse(localStorage.getItem('dazho_access')) || []
+        };
+
+        function saveToDB(collection, data) {
+            db[collection].unshift(data); // Añadir al principio
+            localStorage.setItem(`dazho_${collection}`, JSON.stringify(db[collection]));
+            updateUI();
+        }
+
+        // Utils
         function showToast(message, type = 'success') {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
@@ -711,22 +682,18 @@
             
             container.appendChild(toast);
             
-            // Animate in
-            setTimeout(() => {
-                toast.classList.remove('translate-x-full', 'opacity-0');
-            }, 10);
-            
-            // Animate out
+            setTimeout(() => toast.classList.remove('translate-x-full', 'opacity-0'), 10);
             setTimeout(() => {
                 toast.classList.add('translate-x-full', 'opacity-0');
                 setTimeout(() => toast.remove(), 300);
             }, 3000);
         }
-        
-        // Exportar a window para uso en botones HTML de la tienda
         window.showToast = showToast;
 
-        // Auto-calcular balance en facturación
+        const formatMoney = (amount) => new Intl.NumberFormat('es-DO', { style: 'currency', currency: 'USD' }).format(amount);
+        const formatDate = (timestamp) => new Date(timestamp).toLocaleDateString('es-DO', { year: 'numeric', month: 'short', day: 'numeric' });
+
+        // Auto-calcular balance
         const billAmountInput = document.getElementById('bill-amount');
         const billPaidInput = document.getElementById('bill-paid');
         const billBalanceInput = document.getElementById('bill-balance');
@@ -737,675 +704,243 @@
             const balance = amount - paid;
             billBalanceInput.value = balance >= 0 ? balance.toFixed(2) : 0;
         };
-
         if(billAmountInput && billPaidInput) {
             billAmountInput.addEventListener('input', calculateBalance);
             billPaidInput.addEventListener('input', calculateBalance);
         }
 
-        // Nuevas funciones de Facturación y Compartir
+        // Botones WhatsApp y Copiar
         window.sendWhatsApp = (phone, name, desc, amount, paid, balance, reminder) => {
-            if (!phone) {
-                showToast('Este cliente no tiene número de teléfono registrado.', 'error');
-                return;
-            }
-            const totalFmt = formatMoney(amount);
-            const paidFmt = formatMoney(paid);
-            const balanceFmt = formatMoney(balance);
-            
-            let msg = `Hola ${name},\nGracias por tu compra en *DAZHO GROUP*.\n\n*Detalles de Factura:*\nDescripción: ${desc}\nTotal: ${totalFmt}\nAbonado: ${paidFmt}\n*Resta/Balance: ${balanceFmt}*`;
-            
-            if (balance > 0 && reminder) {
-                msg += `\n\n🗓️ Recordatorio de pago: ${reminder}`;
-            }
-            
-            msg += `\n\n_Conectamos ideas, creamos soluciones._`;
-            
-            const cleanPhone = phone.replace(/\D/g, ''); // Remueve espacios y guiones
-            const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`;
-            window.open(url, '_blank');
+            if (!phone) return showToast('Cliente sin teléfono.', 'error');
+            const msg = `Hola ${name},\nGracias por tu compra en *DAZHO GROUP*.\n\n*Detalles:*\nDescripción: ${desc}\nTotal: ${formatMoney(amount)}\nAbonado: ${formatMoney(paid)}\n*Resta/Balance: ${formatMoney(balance)}*${balance > 0 && reminder ? `\n\n🗓️ Recordatorio de pago: ${reminder}` : ''}\n\n_Conectamos ideas, creamos soluciones._`;
+            window.open(`https://wa.me/${phone.replace(/\D/g, '')}?text=${encodeURIComponent(msg)}`, '_blank');
         };
 
         window.sendClientWhatsApp = (phone, name) => {
-            if (!phone) {
-                showToast('No hay número registrado para este cliente.', 'error');
-                return;
-            }
+            if (!phone) return showToast('Sin teléfono.', 'error');
             const msg = `Hola ${name}, somos DAZHO GROUP. _Conectamos ideas, creamos soluciones._ ¿En qué podemos ayudarte hoy?`;
-            const cleanPhone = phone.replace(/\D/g, '');
-            const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`;
-            window.open(url, '_blank');
+            window.open(`https://wa.me/${phone.replace(/\D/g, '')}?text=${encodeURIComponent(msg)}`, '_blank');
         };
 
         window.copyInvoice = (name, desc, amount, paid, balance, reminder) => {
-            const totalFmt = formatMoney(amount);
-            const paidFmt = formatMoney(paid);
-            const balanceFmt = formatMoney(balance);
-            
-            let msg = `Hola ${name},\nGracias por tu compra en *DAZHO GROUP*.\n\n*Detalles de Factura:*\nDescripción: ${desc}\nTotal: ${totalFmt}\nAbonado: ${paidFmt}\n*Resta/Balance: ${balanceFmt}*`;
-            
-            if (balance > 0 && reminder) {
-                msg += `\n\n🗓️ Recordatorio de pago: ${reminder}`;
-            }
-            
-            msg += `\n\n_Conectamos ideas, creamos soluciones._`;
-            
-            // Creación de un textarea temporal para forzar la copia
-            const textArea = document.createElement("textarea");
-            textArea.value = msg;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showToast('Factura copiada. Lista para pegar en un DM.');
-            } catch (err) {
-                showToast('Error al copiar factura.', 'error');
-            }
-            document.body.removeChild(textArea);
+            const msg = `Hola ${name},\nGracias por tu compra en *DAZHO GROUP*.\n\n*Detalles:*\nDescripción: ${desc}\nTotal: ${formatMoney(amount)}\nAbonado: ${formatMoney(paid)}\n*Resta/Balance: ${formatMoney(balance)}*${balance > 0 && reminder ? `\n\n🗓️ Recordatorio de pago: ${reminder}` : ''}\n\n_Conectamos ideas, creamos soluciones._`;
+            const ta = document.createElement("textarea");
+            ta.value = msg; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); showToast('Factura copiada.'); } 
+            catch (e) { showToast('Error al copiar.', 'error'); }
+            document.body.removeChild(ta);
         };
 
-        // Utilidades de formato
-        const formatMoney = (amount) => {
-            return new Intl.NumberFormat('es-DO', { style: 'currency', currency: 'USD' }).format(amount);
-        };
-        const formatDate = (timestamp) => {
-            if (!timestamp) return 'Reciente';
-            const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
-            return date.toLocaleDateString('es-DO', { year: 'numeric', month: 'short', day: 'numeric' });
-        };
-
-        // Navigation Logic
+        // Navigation
         navBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Reset styles
                 navBtns.forEach(b => {
                     b.classList.remove('bg-dazho-blue/20', 'border', 'border-dazho-gold/30', 'text-dazho-white');
                     b.classList.add('text-dazho-silver');
                     b.querySelector('span').classList.remove('text-dazho-white');
                 });
-                
-                // Set active style
                 btn.classList.remove('text-dazho-silver', 'hover:bg-gray-800');
                 btn.classList.add('bg-dazho-blue/20', 'border', 'border-dazho-gold/30', 'text-dazho-white');
                 
-                // Hide all sections
                 document.querySelectorAll('.app-section').forEach(sec => sec.classList.add('section-hidden'));
-                
-                // Show target section
                 const target = btn.getAttribute('data-target');
                 document.getElementById(`section-${target}`).classList.remove('section-hidden');
                 
-                // Update Title
-                const titles = {
-                    'dashboard': 'Resumen General',
-                    'billing': 'Facturación y Ventas',
-                    'inventory': 'Catálogo Visual de Inventario',
-                    'clients': 'Directorio de Clientes',
-                    'team': 'Monitoreo de Red de Negocios',
-                    'merch': 'Boutique Institucional',
-                    'education': 'Academia y Audios',
-                    'subscription': 'Suscripción del Sistema',
-                    'access': 'Control de Accesos (Google)'
-                };
+                const titles = { 'dashboard': 'Resumen General', 'billing': 'Facturación y Ventas', 'inventory': 'Catálogo Visual', 'clients': 'Directorio', 'team': 'Red de Negocios', 'merch': 'Boutique', 'education': 'Academia', 'subscription': 'Suscripción', 'access': 'Accesos' };
                 pageTitle.innerText = titles[target];
             });
         });
 
-        // Authentication & Initialization
-        async function initApp() {
-            try {
-                if (initialToken) {
-                    await signInWithCustomToken(auth, initialToken);
-                } else {
-                    await signInAnonymously(auth);
-                }
-                
-                currentUser = auth.currentUser;
-                
-                if (currentUser) {
-                    // Hide loading, show app
-                    loadingScreen.classList.add('hidden');
-                    sidebar.classList.remove('hidden');
-                    mainContent.classList.remove('hidden');
-                    
-                    // Setup Real-time Listeners
-                    setupListeners(currentUser.uid);
-                }
-            } catch (error) {
-                console.error("Auth Error:", error);
-                loadingScreen.innerHTML = `<h2 class="text-red-500 text-xl font-bold">Error de Autenticación</h2><p class="text-white mt-2">Por favor, recarga la página.</p>`;
-            }
-        }
+        // Formularios
+        document.getElementById('form-billing')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('sales', {
+                clientName: document.getElementById('bill-client').value,
+                phone: document.getElementById('bill-phone').value,
+                description: document.getElementById('bill-desc').value,
+                amount: parseFloat(document.getElementById('bill-amount').value),
+                paid: parseFloat(document.getElementById('bill-paid').value) || 0,
+                reminder: document.getElementById('bill-reminder').value,
+                createdAt: Date.now()
+            });
+            e.target.reset(); if(document.getElementById('bill-balance')) document.getElementById('bill-balance').value = '';
+            showToast('Venta registrada exitosamente.');
+        });
 
-        // Setup Firebase Data Listeners
-        function setupListeners(userId) {
-            const basePath = `artifacts/${appId}/users/${userId}`;
+        document.getElementById('form-inventory')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('inventory', {
+                productName: document.getElementById('inv-name').value,
+                imageUrl: document.getElementById('inv-image').value,
+                quantity: parseInt(document.getElementById('inv-qty').value),
+                cost: parseFloat(document.getElementById('inv-cost').value),
+                price: parseFloat(document.getElementById('inv-price').value),
+                createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Producto agregado al catálogo visual.');
+        });
+
+        document.getElementById('form-clients')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('clients', {
+                name: document.getElementById('client-name').value,
+                lastname: document.getElementById('client-lastname').value,
+                email: document.getElementById('client-email').value,
+                phone: document.getElementById('client-phone').value,
+                createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Cliente guardado en el directorio.');
+        });
+
+        document.getElementById('form-team')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('team', {
+                memberName: document.getElementById('team-name').value,
+                role: document.getElementById('team-role').value,
+                salesGenerated: parseFloat(document.getElementById('team-sales').value),
+                createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Miembro agregado a la red.');
+        });
+
+        document.getElementById('form-education')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('education', {
+                title: document.getElementById('edu-title').value,
+                description: document.getElementById('edu-desc').value,
+                audioUrl: document.getElementById('edu-audio-url').value,
+                createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Material educativo subido.');
+        });
+
+        document.getElementById('form-subscription')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('subscriptions', {
+                amount: 39.99, plan: 'Pro', last4: document.getElementById('sub-card').value.slice(-4) || '0000', createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Pago procesado correctamente.', 'success');
+        });
+
+        document.getElementById('form-access')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveToDB('access', {
+                email: document.getElementById('access-email').value, role: document.getElementById('access-role').value, createdAt: Date.now()
+            });
+            e.target.reset(); showToast('Acceso autorizado.');
+        });
+
+        // Actualizar Interfaz
+        function updateUI() {
+            // Dashboard
+            let totalVentas = 0; db.sales.forEach(s => totalVentas += parseFloat(s.amount));
+            document.getElementById('metric-sales').innerText = formatMoney(totalVentas);
             
-            // 1. Listen to Sales (Facturación)
-            const salesCol = collection(db, `${basePath}/sales`);
-            onSnapshot(query(salesCol), (snapshot) => {
-                salesData = [];
-                let totalSalesAmount = 0;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    salesData.push({ id: doc.id, ...data });
-                    totalSalesAmount += parseFloat(data.amount || 0);
-                });
-                // Sort by date desc in memory
-                salesData.sort((a, b) => b.createdAt - a.createdAt);
-                
-                renderSalesTable();
-                document.getElementById('metric-sales').innerText = formatMoney(totalSalesAmount);
-            }, (error) => console.error("Sales Error:", error));
+            let totalInv = 0; db.inventory.forEach(i => totalInv += parseInt(i.quantity));
+            document.getElementById('metric-inventory').innerText = totalInv;
+            document.getElementById('metric-team').innerText = db.team.length;
 
-            // 2. Listen to Inventory (Inventario)
-            const invCol = collection(db, `${basePath}/inventory`);
-            onSnapshot(query(invCol), (snapshot) => {
-                inventoryData = [];
-                let totalItems = 0;
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    inventoryData.push({ id: doc.id, ...data });
-                    totalItems += parseInt(data.quantity || 0);
-                });
-                inventoryData.sort((a, b) => b.createdAt - a.createdAt);
-                
-                renderInventoryTable();
-                document.getElementById('metric-inventory').innerText = totalItems;
-            }, (error) => console.error("Inventory Error:", error));
-
-            // 3. Listen to Team (Equipo)
-            const teamCol = collection(db, `${basePath}/team`);
-            onSnapshot(query(teamCol), (snapshot) => {
-                teamData = [];
-                snapshot.forEach(doc => {
-                    teamData.push({ id: doc.id, ...doc.data() });
-                });
-                teamData.sort((a, b) => b.createdAt - a.createdAt);
-                
-                renderTeamTable();
-                document.getElementById('metric-team').innerText = teamData.length;
-            }, (error) => console.error("Team Error:", error));
-
-            // 4. Listen to Clients (Clientes)
-            const clientsCol = collection(db, `${basePath}/clients`);
-            onSnapshot(query(clientsCol), (snapshot) => {
-                clientsData = [];
-                snapshot.forEach(doc => {
-                    clientsData.push({ id: doc.id, ...doc.data() });
-                });
-                clientsData.sort((a, b) => b.createdAt - a.createdAt);
-                
-                renderClientsTable();
-            }, (error) => console.error("Clients Error:", error));
-
-            // 5. Listen to Education (Audios)
-            const eduCol = collection(db, `${basePath}/education`);
-            onSnapshot(query(eduCol), (snapshot) => {
-                educationData = [];
-                snapshot.forEach(doc => {
-                    educationData.push({ id: doc.id, ...doc.data() });
-                });
-                educationData.sort((a, b) => b.createdAt - a.createdAt);
-                renderEducationGrid();
-            }, (error) => console.error("Education Error:", error));
-
-            // 6. Listen to Subscription Payments
-            const subCol = collection(db, `${basePath}/subscriptions`);
-            onSnapshot(query(subCol), (snapshot) => {
-                subscriptionData = [];
-                snapshot.forEach(doc => {
-                    subscriptionData.push({ id: doc.id, ...doc.data() });
-                });
-                subscriptionData.sort((a, b) => b.createdAt - a.createdAt);
-                renderSubscriptionTable();
-            }, (error) => console.error("Subscription Error:", error));
-
-            // 7. Listen to Access (Google)
-            const accessCol = collection(db, `${basePath}/access`);
-            onSnapshot(query(accessCol), (snapshot) => {
-                accessData = [];
-                snapshot.forEach(doc => {
-                    accessData.push({ id: doc.id, ...doc.data() });
-                });
-                accessData.sort((a, b) => b.createdAt - a.createdAt);
-                renderAccessTable();
-            }, (error) => console.error("Access Error:", error));
-        }
-
-        // Renders
-        function renderSalesTable() {
-            const tbody = document.getElementById('tbody-billing');
-            const emptyMsg = document.getElementById('empty-billing');
-            if(!tbody) return;
-            tbody.innerHTML = '';
-            
-            if (salesData.length === 0) {
-                emptyMsg?.classList.remove('hidden');
-            } else {
-                emptyMsg?.classList.add('hidden');
-                salesData.forEach(sale => {
-                    // Limpieza de caracteres para no romper los botones JS
-                    const phoneEscaped = sale.phone ? sale.phone.replace(/'/g, "\\'") : '';
-                    const nameEscaped = sale.clientName ? sale.clientName.replace(/'/g, "\\'") : '';
-                    const descEscaped = sale.description ? sale.description.replace(/'/g, "\\'") : '';
-                    
-                    const amount = parseFloat(sale.amount) || 0;
-                    const paid = parseFloat(sale.paid) || 0;
-                    const balance = amount - paid;
-                    const reminder = sale.reminder || '';
-
-                    tbody.innerHTML += `
-                        <tr>
-                            <td>
-                                <span class="text-xs bg-gray-800 px-2 py-1 rounded block mb-1">${formatDate(sale.createdAt)}</span>
-                                ${reminder && balance > 0 ? `<span class="text-[10px] text-dazho-gold"><i class="fa-solid fa-clock"></i> ${reminder}</span>` : ''}
-                            </td>
-                            <td class="font-medium text-dazho-white">${sale.clientName} <br><span class="text-[10px] text-gray-500">${sale.phone || 'Sin número'}</span></td>
-                            <td class="text-sm truncate max-w-[150px]" title="${sale.description}">${sale.description}</td>
-                            <td class="font-bold text-dazho-silver">${formatMoney(amount)}</td>
-                            <td class="font-bold ${balance > 0 ? 'text-red-400' : 'text-green-400'}">${formatMoney(balance)}</td>
-                            <td>
-                                <div class="flex gap-2">
-                                    <button onclick="window.sendWhatsApp('${phoneEscaped}', '${nameEscaped}', '${descEscaped}', ${amount}, ${paid}, ${balance}, '${reminder}')" class="w-8 h-8 rounded bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366] hover:text-white transition flex items-center justify-center border border-[#25D366]/30" title="Enviar Recibo por WhatsApp">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </button>
-                                    <button onclick="window.copyInvoice('${nameEscaped}', '${descEscaped}', ${amount}, ${paid}, ${balance}, '${reminder}')" class="w-8 h-8 rounded bg-dazho-blue/20 text-blue-400 hover:bg-dazho-blue hover:text-white transition flex items-center justify-center border border-blue-500/30" title="Copiar para FB/IG">
-                                        <i class="fa-solid fa-copy"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    `;
+            // Facturación
+            const tbSales = document.getElementById('tbody-billing');
+            tbSales.innerHTML = '';
+            if(db.sales.length === 0) document.getElementById('empty-billing').classList.remove('hidden');
+            else {
+                document.getElementById('empty-billing').classList.add('hidden');
+                db.sales.forEach(s => {
+                    const balance = s.amount - s.paid;
+                    const ph = s.phone ? s.phone.replace(/'/g, "\\'") : '';
+                    const nm = s.clientName.replace(/'/g, "\\'");
+                    const ds = s.description.replace(/'/g, "\\'");
+                    tbSales.innerHTML += `<tr>
+                        <td><span class="text-xs bg-gray-800 px-2 py-1 rounded block mb-1">${formatDate(s.createdAt)}</span>${s.reminder && balance>0 ? `<span class="text-[10px] text-dazho-gold"><i class="fa-solid fa-clock"></i> ${s.reminder}</span>`:''}</td>
+                        <td class="font-medium text-dazho-white">${s.clientName}<br><span class="text-[10px] text-gray-500">${s.phone}</span></td>
+                        <td class="text-sm truncate max-w-[150px]">${s.description}</td>
+                        <td class="font-bold text-dazho-silver">${formatMoney(s.amount)}</td>
+                        <td class="font-bold ${balance>0?'text-red-400':'text-green-400'}">${formatMoney(balance)}</td>
+                        <td>
+                            <div class="flex gap-2">
+                                <button onclick="window.sendWhatsApp('${ph}','${nm}','${ds}',${s.amount},${s.paid},${balance},'${s.reminder||''}')" class="w-8 h-8 rounded bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center border border-[#25D366]/30"><i class="fa-brands fa-whatsapp"></i></button>
+                                <button onclick="window.copyInvoice('${nm}','${ds}',${s.amount},${s.paid},${balance},'${s.reminder||''}')" class="w-8 h-8 rounded bg-dazho-blue/20 text-blue-400 hover:bg-dazho-blue hover:text-white flex items-center justify-center border border-blue-500/30"><i class="fa-solid fa-copy"></i></button>
+                            </div>
+                        </td>
+                    </tr>`;
                 });
             }
-        }
 
-        function renderInventoryTable() {
-            const grid = document.getElementById('grid-inventory');
-            const emptyMsg = document.getElementById('empty-inventory');
-            if(!grid) return;
-            grid.innerHTML = '';
-            
-            if (inventoryData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-                grid.classList.add('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                grid.classList.remove('hidden');
-                inventoryData.forEach(item => {
-                    const cost = parseFloat(item.cost);
-                    const price = parseFloat(item.price);
-                    const qty = parseInt(item.quantity);
-                    const unitProfit = price - cost;
-                    
-                    const fallbackImg = 'https://placehold.co/400x300/1F1F1F/D4AF37?text=Producto';
-
-                    grid.innerHTML += `
-                        <div class="bg-dazho-black rounded-lg border border-gray-800 overflow-hidden flex flex-col shadow-lg relative group">
-                            <!-- Imagen -->
-                            <div class="h-44 bg-gray-900 relative overflow-hidden flex-shrink-0">
-                                <img src="${item.imageUrl || fallbackImg}" onerror="this.src='${fallbackImg}'" alt="${item.productName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="absolute top-2 right-2 bg-dazho-dark border border-gray-600 px-2 py-0.5 rounded text-xs text-white">Stock: ${qty}</div>
-                            </div>
-                            <!-- Contenido -->
-                            <div class="p-4 flex flex-col flex-1">
-                                <h4 class="text-dazho-white font-bold text-lg mb-4 truncate" title="${item.productName}">${item.productName}</h4>
-                                
-                                <div class="mt-auto grid grid-cols-2 gap-2 border-t border-gray-800 pt-3">
-                                    <div>
-                                        <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Costo</p>
-                                        <p class="text-sm text-dazho-silver">${formatMoney(cost)}</p>
-                                    </div>
-                                    <div class="text-right">
-                                        <p class="text-[10px] text-dazho-gold uppercase tracking-wider mb-0.5 font-bold">Precio Público</p>
-                                        <p class="text-lg font-bold text-dazho-gold leading-none">${formatMoney(price)}</p>
-                                    </div>
-                                </div>
-                            </div>
+            // Inventario
+            const gdInv = document.getElementById('grid-inventory'); gdInv.innerHTML = '';
+            if(db.inventory.length === 0) document.getElementById('empty-inventory').classList.remove('hidden');
+            else {
+                document.getElementById('empty-inventory').classList.add('hidden');
+                db.inventory.forEach(i => {
+                    gdInv.innerHTML += `<div class="bg-dazho-black rounded-lg border border-gray-800 overflow-hidden flex flex-col shadow-lg relative group">
+                        <div class="h-44 bg-gray-900 relative overflow-hidden flex-shrink-0">
+                            <img src="${i.imageUrl}" onerror="this.src='https://placehold.co/400x300/1F1F1F/D4AF37?text=Producto'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 right-2 bg-dazho-dark border border-gray-600 px-2 py-0.5 rounded text-xs text-white">Stock: ${i.quantity}</div>
                         </div>
-                    `;
+                        <div class="p-4 flex flex-col flex-1"><h4 class="text-dazho-white font-bold text-lg mb-4 truncate">${i.productName}</h4>
+                        <div class="mt-auto grid grid-cols-2 gap-2 border-t border-gray-800 pt-3">
+                            <div><p class="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">Costo</p><p class="text-sm text-dazho-silver">${formatMoney(i.cost)}</p></div>
+                            <div class="text-right"><p class="text-[10px] text-dazho-gold uppercase tracking-wider mb-0.5 font-bold">Precio Público</p><p class="text-lg font-bold text-dazho-gold leading-none">${formatMoney(i.price)}</p></div>
+                        </div></div></div>`;
                 });
+            }
+
+            // Clientes
+            const tbCl = document.getElementById('tbody-clients'); tbCl.innerHTML = '';
+            if(db.clients.length === 0) document.getElementById('empty-clients').classList.remove('hidden');
+            else {
+                document.getElementById('empty-clients').classList.add('hidden');
+                db.clients.forEach(c => {
+                    const fn = `${c.name} ${c.lastname}`.trim(); const ph = c.phone?c.phone.replace(/'/g,"\\'"): ''; const nm = fn.replace(/'/g,"\\'");
+                    tbCl.innerHTML += `<tr><td class="font-medium text-dazho-white"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-dazho-blue/20 text-dazho-blue flex items-center justify-center border border-dazho-blue/30 text-xs font-bold">${fn.charAt(0).toUpperCase()}</div>${fn}</div></td>
+                    <td><a href="mailto:${c.email}" class="text-dazho-gold hover:underline text-sm"><i class="fa-regular fa-envelope"></i> ${c.email}</a></td>
+                    <td class="text-sm text-dazho-silver">${c.phone||'N/A'} ${c.phone?`<button onclick="window.sendClientWhatsApp('${ph}','${nm}')" class="text-[#25D366] hover:text-white transition ml-2"><i class="fa-brands fa-whatsapp text-lg"></i></button>`:''}</td>
+                    <td class="text-xs text-gray-500">${formatDate(c.createdAt)}</td></tr>`;
+                });
+            }
+
+            // Equipo
+            const tbTm = document.getElementById('tbody-team'); tbTm.innerHTML = '';
+            if(db.team.length === 0) document.getElementById('empty-team').classList.remove('hidden');
+            else {
+                document.getElementById('empty-team').classList.add('hidden');
+                db.team.forEach(t => tbTm.innerHTML += `<tr><td class="font-medium text-dazho-white flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-xs border border-gray-600">${t.memberName.charAt(0).toUpperCase()}</div>${t.memberName}</td>
+                <td><span class="text-xs bg-dazho-blue/30 text-blue-300 px-2 py-1 rounded border border-blue-800">${t.role}</span></td><td class="text-sm">${formatDate(t.createdAt)}</td><td class="font-bold text-dazho-gold">${formatMoney(t.salesGenerated)}</td></tr>`);
+            }
+
+            // Educación
+            const gdEd = document.getElementById('grid-education'); gdEd.innerHTML = '';
+            if(db.education.length === 0) document.getElementById('empty-education').classList.remove('hidden');
+            else {
+                document.getElementById('empty-education').classList.add('hidden');
+                db.education.forEach(e => gdEd.innerHTML += `<div class="bg-dazho-black p-4 rounded-lg border border-gray-800 shadow-md flex flex-col justify-between"><div><div class="flex justify-between items-start mb-2"><h4 class="text-dazho-gold font-bold">${e.title}</h4><i class="fa-solid fa-headphones text-gray-600 text-lg"></i></div><p class="text-xs text-dazho-silver mb-4">${e.description}</p></div><div class="mt-2 w-full"><audio controls class="w-full h-8 opacity-80 rounded outline-none invert"><source src="${e.audioUrl}" type="audio/mpeg"></audio></div><div class="mt-3 text-[10px] text-gray-500 text-right">Subido: ${formatDate(e.createdAt)}</div></div>`);
+            }
+
+            // Suscripción
+            const tbSub = document.getElementById('tbody-subscription'); tbSub.innerHTML = '';
+            if(db.subscriptions.length === 0) document.getElementById('empty-subscription').classList.remove('hidden');
+            else {
+                document.getElementById('empty-subscription').classList.add('hidden');
+                db.subscriptions.forEach(s => tbSub.innerHTML += `<tr><td class="font-medium text-dazho-white">${formatDate(s.createdAt)}</td><td class="font-bold text-dazho-silver">${formatMoney(s.amount)}</td><td class="text-sm">**** **** **** ${s.last4}</td><td><span class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded border border-green-800/50"><i class="fa-solid fa-check"></i> Pagado</span></td></tr>`);
+            }
+
+            // Accesos
+            const tbAcc = document.getElementById('tbody-access'); tbAcc.innerHTML = '';
+            if(db.access.length === 0) document.getElementById('empty-access').classList.remove('hidden');
+            else {
+                document.getElementById('empty-access').classList.add('hidden');
+                db.access.forEach(a => tbAcc.innerHTML += `<tr><td class="font-medium text-dazho-white flex items-center gap-2"><i class="fa-brands fa-google text-dazho-gold"></i> ${a.email}</td><td><span class="text-xs bg-dazho-dark text-dazho-silver px-2 py-1 rounded border border-gray-600">${a.role}</span></td><td class="text-sm text-gray-400">${formatDate(a.createdAt)}</td><td><span class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded border border-green-800/50">Autorizado</span></td></tr>`);
             }
         }
 
-        function renderClientsTable() {
-            const tbody = document.getElementById('tbody-clients');
-            const emptyMsg = document.getElementById('empty-clients');
-            if(!tbody) return;
-            tbody.innerHTML = '';
-            
-            if (clientsData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                clientsData.forEach(client => {
-                    const fullName = `${client.name} ${client.lastname || ''}`.trim();
-                    const phoneEscaped = client.phone ? client.phone.replace(/'/g, "\\'") : '';
-                    const nameEscaped = fullName.replace(/'/g, "\\'");
-
-                    tbody.innerHTML += `
-                        <tr>
-                            <td class="font-medium text-dazho-white">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-dazho-blue/20 text-dazho-blue flex items-center justify-center border border-dazho-blue/30 text-xs font-bold">
-                                        ${fullName.charAt(0).toUpperCase()}
-                                    </div>
-                                    ${fullName}
-                                </div>
-                            </td>
-                            <td>
-                                <a href="mailto:${client.email}" class="text-dazho-gold hover:underline text-sm flex items-center gap-2">
-                                    <i class="fa-regular fa-envelope"></i> ${client.email}
-                                </a>
-                            </td>
-                            <td class="text-sm text-dazho-silver flex items-center gap-2">
-                                ${client.phone || 'N/A'}
-                                ${client.phone ? `
-                                    <button onclick="window.sendClientWhatsApp('${phoneEscaped}', '${nameEscaped}')" class="text-[#25D366] hover:text-white transition ml-2" title="Contactar por WhatsApp">
-                                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                                    </button>
-                                ` : ''}
-                            </td>
-                            <td class="text-xs text-gray-500">${formatDate(client.createdAt)}</td>
-                        </tr>
-                    `;
-                });
-            }
-        }
-
-        function renderTeamTable() {
-            const tbody = document.getElementById('tbody-team');
-            const emptyMsg = document.getElementById('empty-team');
-            tbody.innerHTML = '';
-            
-            if (teamData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                teamData.forEach(member => {
-                    tbody.innerHTML += `
-                        <tr>
-                            <td class="font-medium text-dazho-white flex items-center gap-2">
-                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-xs border border-gray-600">
-                                    ${member.memberName.charAt(0).toUpperCase()}
-                                </div>
-                                ${member.memberName}
-                            </td>
-                            <td><span class="text-xs bg-dazho-blue/30 text-blue-300 px-2 py-1 rounded border border-blue-800">${member.role}</span></td>
-                            <td class="text-sm">${formatDate(member.createdAt)}</td>
-                            <td class="font-bold text-dazho-gold">${formatMoney(member.salesGenerated)}</td>
-                        </tr>
-                    `;
-                });
-            }
-        }
-
-        function renderEducationGrid() {
-            const grid = document.getElementById('grid-education');
-            const emptyMsg = document.getElementById('empty-education');
-            if(!grid) return;
-            grid.innerHTML = '';
-            
-            if (educationData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-                grid.classList.add('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                grid.classList.remove('hidden');
-                educationData.forEach(audio => {
-                    grid.innerHTML += `
-                        <div class="bg-dazho-black p-4 rounded-lg border border-gray-800 shadow-md flex flex-col justify-between">
-                            <div>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-dazho-gold font-bold">${audio.title}</h4>
-                                    <i class="fa-solid fa-headphones text-gray-600 text-lg"></i>
-                                </div>
-                                <p class="text-xs text-dazho-silver mb-4">${audio.description}</p>
-                            </div>
-                            <div class="mt-2 w-full">
-                                <audio controls class="w-full h-8 opacity-80 rounded outline-none invert">
-                                    <source src="${audio.audioUrl}" type="audio/mpeg">
-                                    Tu navegador no soporta el reproductor.
-                                </audio>
-                            </div>
-                            <div class="mt-3 text-[10px] text-gray-500 text-right">Subido: ${formatDate(audio.createdAt)}</div>
-                        </div>
-                    `;
-                });
-            }
-        }
-
-        function renderSubscriptionTable() {
-            const tbody = document.getElementById('tbody-subscription');
-            const emptyMsg = document.getElementById('empty-subscription');
-            if(!tbody) return;
-            tbody.innerHTML = '';
-            
-            if (subscriptionData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                subscriptionData.forEach(sub => {
-                    tbody.innerHTML += `
-                        <tr>
-                            <td class="font-medium text-dazho-white">${formatDate(sub.createdAt)}</td>
-                            <td class="font-bold text-dazho-silver">${formatMoney(sub.amount)}</td>
-                            <td class="text-sm">**** **** **** ${sub.last4}</td>
-                            <td><span class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded border border-green-800/50 flex items-center w-fit gap-1"><i class="fa-solid fa-check"></i> Pagado</span></td>
-                        </tr>
-                    `;
-                });
-            }
-        }
-
-        function renderAccessTable() {
-            const tbody = document.getElementById('tbody-access');
-            const emptyMsg = document.getElementById('empty-access');
-            if(!tbody) return;
-            tbody.innerHTML = '';
-            
-            if (accessData.length === 0) {
-                emptyMsg.classList.remove('hidden');
-            } else {
-                emptyMsg.classList.add('hidden');
-                accessData.forEach(acc => {
-                    tbody.innerHTML += `
-                        <tr>
-                            <td class="font-medium text-dazho-white flex items-center gap-2">
-                                <i class="fa-brands fa-google text-dazho-gold"></i> ${acc.email}
-                            </td>
-                            <td><span class="text-xs bg-dazho-dark text-dazho-silver px-2 py-1 rounded border border-gray-600">${acc.role}</span></td>
-                            <td class="text-sm text-gray-400">${formatDate(acc.createdAt)}</td>
-                            <td><span class="text-xs bg-green-900/30 text-green-400 px-2 py-1 rounded border border-green-800/50">Autorizado</span></td>
-                        </tr>
-                    `;
-                });
-            }
-        }
-
-        // Form Submit Handlers
-        document.getElementById('form-billing')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const clientName = document.getElementById('bill-client').value;
-            const phone = document.getElementById('bill-phone').value;
-            const amount = parseFloat(document.getElementById('bill-amount').value);
-            const paid = parseFloat(document.getElementById('bill-paid').value) || 0;
-            const reminder = document.getElementById('bill-reminder').value;
-            const description = document.getElementById('bill-desc').value;
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/sales`;
-                await addDoc(collection(db, basePath), {
-                    clientName,
-                    phone,
-                    amount,
-                    paid,
-                    reminder,
-                    description,
-                    createdAt: Date.now()
-                });
-                showToast('Venta registrada exitosamente.');
-                e.target.reset();
-                if(document.getElementById('bill-balance')) document.getElementById('bill-balance').value = '';
-            } catch (error) {
-                showToast('Error al registrar venta.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-inventory').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const productName = document.getElementById('inv-name').value;
-            const imageUrl = document.getElementById('inv-image').value;
-            const quantity = parseInt(document.getElementById('inv-qty').value);
-            const cost = parseFloat(document.getElementById('inv-cost').value);
-            const price = parseFloat(document.getElementById('inv-price').value);
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/inventory`;
-                await addDoc(collection(db, basePath), {
-                    productName,
-                    imageUrl,
-                    quantity,
-                    cost,
-                    price,
-                    createdAt: Date.now()
-                });
-                showToast('Producto agregado al catálogo visual.');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al registrar inventario.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-clients')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const name = document.getElementById('client-name').value;
-            const lastname = document.getElementById('client-lastname').value;
-            const email = document.getElementById('client-email').value;
-            const phone = document.getElementById('client-phone').value;
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/clients`;
-                await addDoc(collection(db, basePath), {
-                    name,
-                    lastname,
-                    email,
-                    phone,
-                    createdAt: Date.now()
-                });
-                showToast('Cliente guardado en el directorio.');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al guardar cliente.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-team')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const memberName = document.getElementById('team-name').value;
-            const role = document.getElementById('team-role').value;
-            const salesGenerated = parseFloat(document.getElementById('team-sales').value);
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/team`;
-                await addDoc(collection(db, basePath), {
-                    memberName,
-                    role,
-                    salesGenerated,
-                    createdAt: Date.now()
-                });
-                showToast('Miembro agregado a la red.');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al agregar miembro.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-education')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const title = document.getElementById('edu-title').value;
-            const description = document.getElementById('edu-desc').value;
-            const audioUrl = document.getElementById('edu-audio-url').value;
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/education`;
-                await addDoc(collection(db, basePath), {
-                    title,
-                    description,
-                    audioUrl,
-                    createdAt: Date.now()
-                });
-                showToast('Material educativo subido correctamente.');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al subir material.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-subscription')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const cardNumber = document.getElementById('sub-card').value;
-            const last4 = cardNumber.slice(-4) || '0000'; // Simulación de seguridad
-            const amount = 39.99;
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/subscriptions`;
-                await addDoc(collection(db, basePath), {
-                    amount,
-                    last4,
-                    plan: 'Pro',
-                    createdAt: Date.now()
-                });
-                showToast('Pago procesado correctamente. Gracias por usar DAZHO System.', 'success');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al procesar el pago.', 'error');
-                console.error(error);
-            }
-        });
-
-        document.getElementById('form-access')?.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if(!currentUser) return;
-
-            const email = document.getElementById('access-email').value;
-            const role = document.getElementById('access-role').value;
-
-            try {
-                const basePath = `artifacts/${appId}/users/${currentUser.uid}/access`;
-                await addDoc(collection(db, basePath), {
-                    email,
-                    role,
-                    createdAt: Date.now()
-                });
-                showToast('Acceso de Google autorizado.');
-                e.target.reset();
-            } catch (error) {
-                showToast('Error al autorizar acceso.', 'error');
-                console.error(error);
-            }
-        });
-
-        // Start App
-        window.addEventListener('DOMContentLoaded', initApp);
+        // Iniciar
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            sidebar.classList.remove('hidden');
+            mainContent.classList.remove('hidden');
+            updateUI();
+        }, 1500);
 
     </script>
 </body>
